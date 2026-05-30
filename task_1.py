@@ -97,10 +97,12 @@ class OnlineSalesRegisterCollector:
      
     def get_telephone_number(telephone_number):
         
+        str_telephone_number = str(telephone_number)
+        
         if type(telephone_number) != int:
             raise ValueError('Необходимо ввести цифры')
         
-        elif len(telephone_number) != 10:
+        elif len(str_telephone_number) != 10:
             raise ValueError('Необходимо ввести 10 цифр после "+7"')
 
         return f'+7{telephone_number}'
